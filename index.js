@@ -124,6 +124,8 @@ ansiEscapes.image = (buffer, options = {}) => {
 		ret += ';preserveAspectRatio=0';
 	}
 
+	ret += `;size=${buffer.length}`
+
 	return ret + ':' + buffer.toString('base64') + BEL;
 };
 
